@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Budget Application</title>
+    <link rel="stylesheet" href="assets/css/main.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="app-container">
+        <main class="app-main">
+          <header class="header">
+            <h1>Simple Budget Application</h1>
+          </header>
+          <div class="table-container">
+            <table class="budget-table">
+              <tr>
+                <th colspan="2">Budget Table</th>
+              </tr>
+              <tr class="total">
+                <td id="total"></td>
+                <td>Total</td>
+              </tr>
+            </table>
+          </div>
+          <div class="controls">
+            <form class="budget-table-controls">
+              <div class="amount-wrapper">
+                <label for="amount">Amount, $</label>
+                <input id="amount" type="number" step="0.01">
+              </div>
+              <input id="transaction-details" type="text" placeholder="Enter transaction details">
+              <button id="amount-add" type="button">Add</button>
+              <button id="row-remove" type="button">Remove</button>
+            </form>
+          </div>
+        </main>
+        <aside class="app-aside">
+          <button id="sum-up" type="button">Sum Up</button>
+        </aside>
+      </div>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
