@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|News+Cycle|Amiri)
+
+html
+    box-sizing: border-box
+
+*, *::before, *::after
+    box-sizing: inherit
+
+td
+    padding: 0 1em
+
+.wrapper
+    display: flex
+    justify-content: center
+
+.app-container
+    display: flex
+    align-items: stretch
+    width: 50vw
+
+.app-main
+    flex: 2 1 calc(50vw * 0.66)
+
+.app-aside
+    align-self: flex-end
+    flex: 1 1 calc(50vw * 0.33)
+
+.amount-wrapper
+    display: flex
+    flex-flow: column
+
+.budget-table, td, th
+    border: 1px solid lavender
+    border-collapse: collapse
+
+.budget-table
+    width: 100%
+    td:first-child
+        width: 10vw
+
+.budget-table-controls, .controls
+    display: flex
+
+.budget-table-controls
+    width: 100%
+    #amount
+        order: 1
+
+.header
+    text-align: center
+    font-family: Raleway
+    h1
+        font-weight: 400
+
+.hidden
+    display: none
+
+.positive:hover, .negative:hover
+    cursor: pointer
+
+.positive
+    // Color of table row if positive amount added
+    background-color: forestgreen
+    // background-color: rgba(0, 255, 0, 0.3)
+
+.negative
+    // Table row if spent amount to be added
+    background-color: palevioletred
+
+.summed-entry
+    background-color: grey
+    // background-color: rgba(0, 60, 60, 0.3)
+
+.row-selected
+    background-color: dodgerblue
+
+.table-container, .controls
+    font-family: News Cycle
+
+
+#amount-add, #transaction-details, #row-remove
+    align-self: flex-end
+
+#transaction-details
+    flex: 1 0 auto

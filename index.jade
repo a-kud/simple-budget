@@ -1,0 +1,38 @@
+//output: index.html
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title Simple Budget Application
+        link(rel="stylesheet", href="assets/css/main.min.css")
+    body
+        .wrapper
+            .app-container
+                main.app-main
+                    header.header
+                        h1 Simple Budget Application
+                    .table-container
+                        table.budget-table
+                            tr
+                                th(colspan="2") Budget Table
+                            //- tr.positive
+                            //-     td 100
+                            //-     td Income
+                            //- tr.negative
+                            //-     td -50
+                            //-     td Spent on candybars
+                            tr.total
+                                td#total
+                                td Total
+                    .controls
+                        form.budget-table-controls
+                            .amount-wrapper
+                                label(for="amount") Amount, $
+                                input#amount(type="number" step="0.01")
+                            input#transaction-details(type="text" placeholder="Enter transaction details")
+                            button#amount-add(type="button") Add
+                            button#row-remove(type="button") Remove
+                aside.app-aside
+                    button#sum-up(type="button") Sum Up
+        script(src="assets/js/main.js")
